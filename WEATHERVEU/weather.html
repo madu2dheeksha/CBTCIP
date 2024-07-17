@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHERVUE</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.location {
+    margin-bottom: 20px;
+}
+
+.location form {
+    display: flex;
+    align-items: center;
+}
+
+#city-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+}
+
+.weather-display {
+    display: none;  /* Initially hidden until weather data is retrieved */
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+#temperature, #description {
+    margin-left: 20px;
+}
+
+.additional-details {
+    display: flex;
+    justify-content: space-between;
+}
+.submit{
+    display: flex;
+    border: 1px solid #ccc ;
+    margin-left: 10px;
+    height: 35px;
+    text-align:center;
+
+
+}
+.pics{
+    display: flex;
+    justify-content: space-evenly;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WEATHERVUE</h1>
+        <p>Your Local Weather</p>
+    </header>
+  
+    <div class="pics">
+        <img src="weather3.jpg"  alt="">
+        <img src="weather3.jpg" alt="">
+    </div>
+    <main>
+        <section class="location">
+            <h2>Enter Location</h2>
+            <form id="location-form">
+                <input type="text" id="city-input" placeholder="City, State or Zip Code"> 
+                <button type="submit" class="submit">Get Weather</button>
+                
+            </form>
+            <div>
+            
+            </div>
+            
+        </section>
+        <section class="weather-display" id="weather-display">
+            <h2>Current Weather</h2>
+            <div class="weather-info">
+                <img id="weather-icon" src="" alt="Weather Icon">
+                <p id="temperature"></p>
+                <p id="description"></p>
+            </div>
+            <div class="additional-details">
+                <p id="humidity"></p>
+                <p id="wind"></p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>  </body>
+</html>
